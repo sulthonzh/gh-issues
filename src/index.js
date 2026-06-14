@@ -77,13 +77,11 @@ function formatText(issues, opts = {}) {
 
   lines.push(`Total: ${issues.length} open issue${issues.length !== 1 ? 's' : ''} across ${new Set(issues.map(i => i.repo)).size} repo${new Set(issues.map(i => i.repo)).size !== 1 ? 's' : ''}`);
 
-  // Stale summary
   const staleCount = issues.filter(i => i.stale).length;
   if (staleCount > 0) {
     lines.push(`Stale (>30d no update): ${staleCount}`);
   }
 
-  // Label breakdown
   const labelCounts = {};
   for (const i of issues) {
     for (const l of i.labels) {

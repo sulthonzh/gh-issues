@@ -50,7 +50,6 @@ function main() {
     issues = getAllIssues(user);
   }
 
-  // Filter by labels
   if (args.labels) {
     issues = issues.filter(i => args.labels.some(l => i.labels.includes(l)));
   }
