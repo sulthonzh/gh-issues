@@ -2,14 +2,33 @@
   "name": "@quadbyte/gh-issues",
   "version": "1.0.0",
   "description": "See open issues across all your GitHub repos at a glance",
-  "bin": { "gh-issues": "./cli.js" },
+  "bin": {
+    "gh-issues": "./cli.js"
+  },
   "main": "src/index.js",
-  "files": ["src/", "cli.js", "README.md", "package.json"],
-  "scripts": { "test": "node --test tests/*.test.mjs" },
-  "keywords": ["github", "issues", "cli", "gh"],
+  "files": [
+    "src/",
+    "cli.js",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "github",
+    "issues",
+    "cli",
+    "gh"
+  ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0"
+  }
 }
