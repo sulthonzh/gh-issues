@@ -34,9 +34,9 @@ jobs:
     - name: Release
       uses: changesets/action@v2.1.0
       with:
-        publish: npm publish
-        commit: "chore: version release"
-        title: "chore: version release"
+        publish-script: npm publish
+        commit-message: "chore: version release"
+        pr-title: "chore: version release"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_CONFIG_PROVENANCE: true
